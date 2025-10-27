@@ -8,9 +8,9 @@ public class A_VirtualThread{
 				System.out.println("Index="+i);
 			} 
 		};
-		
-		Thread myThread=Thread.ofVirtual().start(runnable);
-		
+
+        Thread myThread = Thread.startVirtualThread(runnable);
+
 		// Wait to join
 		try {
 			myThread.join();
