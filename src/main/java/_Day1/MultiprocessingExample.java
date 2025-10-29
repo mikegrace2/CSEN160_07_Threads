@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MultiprocessingExample {
     public static void main(String[] args) throws IOException, InterruptedException {
+        System.out.println("Available processors: "+Runtime.getRuntime().availableProcessors());
     	ProcessBuilder processBuilder = new ProcessBuilder(
                 "java",
                 "-cp",
