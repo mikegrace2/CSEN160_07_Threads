@@ -4,7 +4,8 @@ public class MultiprocessingLongExecution {
 
 	public static void main(String[] args) {
 		try {
-			Thread.sleep(10000);
+            System.out.println("Start");
+			Thread.sleep(1000);
 			System.out.println("Done");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
