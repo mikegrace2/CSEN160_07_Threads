@@ -7,11 +7,11 @@ public class A_DemoThreadExtend extends Thread{
 			System.out.println("Thread ID("+Thread.currentThread().getId()+") "+i);
 		}
 		
-//		try {
-//			Thread.sleep(10);// Sleep for 10 ms
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Thread.sleep(10000);// Sleep for 10 ms
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {

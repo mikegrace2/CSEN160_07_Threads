@@ -27,9 +27,10 @@ class BouncingBalls_DifferentPriorities extends JFrame {
 
 		Thread x = new Thread(ball1);
 		//x.setPriority(Thread.NORM_PRIORITY + 3); // Blue
-		x.setPriority(1); // Blue
+		x.setPriority(Thread.MIN_PRIORITY); // Blue
 		Thread y = new Thread(ball2);
-		y.setPriority(Thread.NORM_PRIORITY - 3); // Red
+		//y.setPriority(Thread.NORM_PRIORITY - 3); // Red
+        y.setPriority(Thread.MAX_PRIORITY); // Red
 
 		x.start();
 		y.start();
