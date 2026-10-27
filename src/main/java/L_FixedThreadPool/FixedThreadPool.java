@@ -7,7 +7,7 @@ public class FixedThreadPool {
 
 	public static void main(String[] args) {
 		int numberOfThreads=2;
-		int numberOfTasks=4;
+		int numberOfTasks=100;
 		
 		System.out.println("FixedThreadPool.main(): Start ...");
 		

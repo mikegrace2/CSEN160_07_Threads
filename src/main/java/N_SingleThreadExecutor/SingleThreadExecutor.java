@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class SingleThreadExecutor {
 
 	public static void main(String[] args) {
-		int numberOfTasks=4;
+		int numberOfTasks=40000000;
 		
 		System.out.println("SingleThreadExecutor.main(): Start ...");
 		

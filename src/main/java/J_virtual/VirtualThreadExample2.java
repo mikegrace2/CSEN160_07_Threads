@@ -6,7 +6,7 @@ import java.util.List;
 public class VirtualThreadExample2 {
 	public static void main(String[] args) {
 		long start1, start2, start3, end1, end2, end3;
-		int vThreadCount = 10000;
+		int vThreadCount = 100000;
 		
 		{ // Virtual Threads
 			// Create a lot of Threads
@@ -16,11 +16,9 @@ public class VirtualThreadExample2 {
 			for (int i = 0; i < vThreadCount; i++) {
 				int vThreadIndex = i;
 				Thread vThread = Thread.ofVirtual().start(() -> {
-					int result = 1;
-					for (int j = 0; j < 10; j++) {
-						result *= (j + 1);
-					}
-					System.out.println("Result[" + vThreadIndex + "]: " + result);
+                    int result = 1;
+                    for (int j = 0; j < 100000000; j++)
+                        result++;
 				});
 
 				vThreads.add(vThread);
@@ -45,11 +43,9 @@ public class VirtualThreadExample2 {
 			for (int i = 0; i < vThreadCount; i++) {
 				int vThreadIndex = i;
 				Thread vThread = Thread.ofPlatform().start(() -> {
-					int result = 1;
-					for (int j = 0; j < 10; j++) {
-						result *= (j + 1);
-					}
-					System.out.println("Result[" + vThreadIndex + "]: " + result);
+                    int result = 1;
+                    for (int j = 0; j < 100000000; j++)
+                        result++;
 				});
 
 				vThreads.add(vThread);
@@ -78,10 +74,8 @@ public class VirtualThreadExample2 {
 					@Override
 					public void run() {
 						int result = 1;
-						for (int j = 0; j < 10; j++) {
-							result *= (j + 1);
-						}
-						System.out.println("Result[" + vThreadIndex + "]: " + result);
+						for (int j = 0; j < 100000000; j++)
+							result++;
 					}
 				});
 				

@@ -7,7 +7,7 @@ public class TaskA implements Runnable {
 	public void run() {
 		System.out.println(Thread.currentThread().getName()+
 				" ---------------------- START  ----------------------------- ");
-		for (int i = 0; i < 1000_000; i++) {
+		for (int i = 0; i < 1000_000_000; i++) {
 			double a = 100;
 			double b = 200;
 			double c = a / b;

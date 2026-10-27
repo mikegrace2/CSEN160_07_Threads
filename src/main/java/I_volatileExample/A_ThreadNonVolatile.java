@@ -4,11 +4,13 @@ class A_ThreadNonVolatile extends Thread {
 	boolean keepRunning = true;
 
 	public void run() {
+        int counter=0;
 		while (keepRunning) {
 			System.out.print("A");
+            counter++;
 		} // endless loop, doing nothing
 
-		System.out.println("Thread terminated."); // never get here
+		System.out.println("Thread terminated. counter="+counter); // never get here
 	}
 
 	public static void main(String[] args) throws InterruptedException {

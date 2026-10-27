@@ -4,9 +4,13 @@ class B_ThreadVolatile extends Thread {
 	volatile boolean keepRunning = true;
 
 	public void run() {
-		while (keepRunning) {} // endless loop, doing nothing
+        int counter=0;
+		while (keepRunning) {
+            System.out.print("B");
+            counter++;
+        } // endless loop, doing nothing
 
-		System.out.println("Thread terminated."); // never get here
+		System.out.println("Thread terminated. ="+counter); // never get here
 	}
 
 	public static void main(String[] args) throws InterruptedException {
