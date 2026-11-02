@@ -1,11 +1,11 @@
 package H_counter;
 
 public class B_SimpleCounter_NotSynchronized  implements Runnable{
-	private volatile static int count=0;
+	private static int count=0;
 	
 	@Override
 	public void run() {
-		for (int i=0;i<=10000;i++) {
+		for (int i=0;i<10000;i++) {
 			count++;
 		}		
 	}	

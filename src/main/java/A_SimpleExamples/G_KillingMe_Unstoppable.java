@@ -28,6 +28,8 @@ public class G_KillingMe_Unstoppable extends Thread {
 			e.printStackTrace();
 		}
 
+		killMe.interrupt();
+		killMe.interrupt();
 		killMe.stop();
 	}
 }

@@ -7,12 +7,16 @@ public class A_SimpleCounter_Synchronized implements Runnable{
 	public synchronized static void countPlusPlus() {
 		count++;
 	}
+
+	public static void loop() {
+		for (int i=0;i<1000000;i++) {
+			countPlusPlus();
+		}
+	}
 	
 	@Override
 	public void run() {
-		for (int i=0;i<=10000;i++) {
-			countPlusPlus();
-		}		
+		loop();
 	}
 	
 	public static void main(String[] args) {
