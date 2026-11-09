@@ -34,7 +34,8 @@ public class F_KillingMe extends Thread{
 		}
 
 		//killMe.stop(); //Does not work anymore, it is deprecated and unsafe. It can leave the program in an inconsistent state.
-		killMe.interrupt();
+		//killMe.interrupt();
+		killMe.stop();
 		System.out.println("\nAfter calling interrupt()!\n");
 	}
 }

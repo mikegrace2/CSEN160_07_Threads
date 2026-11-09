@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class VirtualThread_Speed implements Runnable {
 	@Override
 	public void run() {
-		for (int i = 0; i < 1000_000; i++) {
+		for (int i = 0; i < 100_000; i++) {
 			double a = 100;
 			double b = 200;
 			double c = a / b;
@@ -17,7 +17,7 @@ public class VirtualThread_Speed implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		int numberOfThreads = 1000000;
+		int numberOfThreads = 10000;
 
 		// Virtual Threads Virtual Threads Virtual Threads Virtual Threads Virtual
 		{ // Virtual Threads Virtual Threads Virtual Threads Virtual Threads Virtual

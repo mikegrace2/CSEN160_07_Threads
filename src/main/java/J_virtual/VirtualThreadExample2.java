@@ -6,7 +6,7 @@ import java.util.List;
 public class VirtualThreadExample2 {
 	public static void main(String[] args) {
 		long start1, start2, start3, end1, end2, end3;
-		int vThreadCount = 100000;
+		int vThreadCount = 100;
 		
 		{ // Virtual Threads
 			// Create a lot of Threads
